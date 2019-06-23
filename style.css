@@ -10,6 +10,7 @@ header{
   text-transform: uppercase;
   color: ghostwhite;
   background: linear-gradient(lightblue, lightgrey);
+  border-left: 10px solid gray;
 }
 
 h1 {
@@ -17,17 +18,13 @@ h1 {
 }
 
 main section {
-  background: repeating-linear-gradient(lightgray, lightblue);
-
-}
-
-h3 {
-  text-transform: uppercase;
+  background: repeating-linear-gradient(lightgray, lightblue);  
 }
 
 footer {
-  background-color: lightcyan 
+  background-color: rgba(85, 207, 207, 0.753); 
   text-transform: uppercase;
+  border:  rgba(85, 207, 207, 0.753) dotted 4px;
 }
 
 section {
@@ -36,7 +33,21 @@ section {
 
 section img {
   width: 200px;
-  border-style: grroved;
-  border-width: 3 px;
+  border: 5px double gray;
 
+}
+
+h3 {
+  text-transform: uppercase;
+}
+
+p {
+  border-left: 10px solid burlywood;
+}
+
+.one {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 30px;
+  background-color: aquamarine;
+  color: green;
 }
