@@ -29,6 +29,7 @@ function createArtEntry(name, artist, year, location, description) {
 
 var wantsToAdd = prompt("Do you want to add another masterpiece? Type yes or no");
 
+
 // is wantsToAdd not equal to yes and is it not equeal to no)
 
 while( wantsToAdd !== "yes" && wantsToAdd !== "no"){
@@ -41,19 +42,36 @@ if (wantsToAdd === "yes") {
   var numberOfPieces = prompt("How many piece you want to add?")
 
   for(numberOfPieces; numberOfPieces > 0; numberOfPieces--) {
+    var piecesList = []
+
+    var newPiece = {}
+    newPiece.name = prompt("What is the title?");
+    newPiece.artist = prompt("What is the artist");
+    newPiece.year = prompt("What is the year");
+    newPiece.location = prompt("Whare is it located?");
+    newPiece.description = prompt("Please write a short description.");
 
   // prompt the user for the  title, artist, location
-  var uName = prompt("What is the title?");
-  var uArtist = prompt("What is the artist");
-  var uYear = prompt("What is the year");
-  var uLocation = prompt("Whare is it located?");
-  var uDescription = prompt("Please write a short description.")
+  // var uName = 
+  // var uArtist = 
+  // var uYear = 
+  // var uLocation = p
+  // var uDescription = 
 
   //hand the info to the function that builds the html and run the function
-  var html = createArtEntry(uName, uArtist, uYear, uLocation, uDescription);
+   newPiece.html = createArtEntry(newPiece.name, newPiece.artist, newPiece.year, newPiece.location, newPiece.description);
 
+  piecesList.push(newPiece)
+
+  console.log(newPiece)
+  
+
+  for (var index = 0; index < piecesList.length; index++) {
+    // console.log(piecesList[index].html);
+    document.write(piecesList[index].html);
+  }
   // take the html and give it to document.write
-  document.write(html);
+  
   }
 
 } else {
